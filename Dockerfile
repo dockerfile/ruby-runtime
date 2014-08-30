@@ -8,8 +8,8 @@
 FROM dockerfile/ruby
 
 # Set instructions on build.
-ONBUILD ADD Gemfile /app/Gemfile
-ONBUILD ADD Gemfile.lock /app/Gemfile.lock
+ONBUILD ADD Gemfile /app/
+ONBUILD ADD Gemfile.lock /app/
 ONBUILD RUN bundle install
 ONBUILD ADD . /app
 
